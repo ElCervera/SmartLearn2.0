@@ -1,0 +1,68 @@
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Estilos para el componente AIChat */
+  .card {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #eee;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .scroll-area {
+    height: 400px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .message.user {
+    background-color: #007bff;
+    color: #fff;
+    text-align: right;
+  }
+  
+  .message.ai {
+    background-color: #e9ecef;
+    color: #000;
+    text-align: left;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }

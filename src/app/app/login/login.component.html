@@ -1,0 +1,83 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="w-full max-w-md bg-white shadow-md rounded-lg">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-center">Welcome Back</h2>
+        <p class="text-center text-gray-600">Login to your Educative account</p>
+      </div>
+      <form (ngSubmit)="handleSubmit($event)" class="p-6 space-y-4">
+        <div class="space-y-2">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            [(ngModel)]="email"
+            name="email"
+            required
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        <div class="space-y-2">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input
+            id="password"
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+            class="block w-full px-3 py-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <input
+              id="remember"
+              type="checkbox"
+              [(ngModel)]="rememberMe"
+              name="remember"
+              class="h-4 w-4"
+            />
+            <label for="remember" class="text-sm">Remember me</label>
+          </div>
+          <a routerLink="/forgot-password" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input
+            id="teacher-mode"
+            type="checkbox"
+            [(ngModel)]="isTeacher"
+            name="teacherMode"
+            class="h-4 w-4"
+          />
+          <label for="teacher-mode">{{ isTeacher ? 'Teacher' : 'Student' }}</label>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md">
+          Log in as {{ isTeacher ? 'Teacher' : 'Student' }}
+        </button>
+      </form>
+      <div class="flex flex-col space-y-4 p-6">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center">
+            <span class="w-full border-t"></span>
+          </div>
+          <div class="relative flex justify-center text-xs uppercase">
+            <span class="bg-gray-100 px-2 text-gray-600">Or continue with</span>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <button class="w-full border border-gray-300 py-2 px-4 rounded-md flex items-center justify-center">
+            <i class="fab fa-github mr-2"></i>
+            Github
+          </button>
+          <button class="w-full border border-gray-300 py-2 px-4 rounded-md flex items-center justify-center">
+            <i class="fab fa-twitter mr-2"></i>
+            Twitter
+          </button>
+        </div>
+        <p class="text-center text-sm text-gray-600">
+          Don't have an account? <a routerLink="/signup" class="text-blue-600 hover:underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
