@@ -1,68 +1,157 @@
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Estilos para el componente AIChat */
-  .card {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #eee;
-  }
-  
-  .card-content {
-    padding: 10px;
-  }
-  
-  .scroll-area {
-    height: 400px;
-    overflow-y: auto;
-  }
-  
-  .message {
-    margin-bottom: 10px;
-    max-width: 80%;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .message.user {
-    background-color: #007bff;
-    color: #fff;
-    text-align: right;
-  }
-  
-  .message.ai {
-    background-color: #e9ecef;
-    color: #000;
-    text-align: left;
-  }
-  
-  .input-container {
-    display: flex;
-    margin-top: 10px;
-  }
-  
-  input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    margin-left: 10px;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* Contenedor del formulario */
+form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo para los inputs */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Hover para los inputs */
+input[type="email"]:hover,
+input[type="password"]:hover {
+  border-color: #007bff;
+}
+
+/* Checkbox de recordar */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilo para el botón */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Hover para el botón */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para los links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el texto alternativo de redes sociales */
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilo para los botones de redes sociales */
+button.social {
+  width: 48%;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+button.social:hover {
+  background-color: #e0e0e0;
+}
+
+button.github {
+  background-color: #333;
+  color: white;
+}
+
+button.twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+button.github:hover {
+  background-color: #222;
+}
+
+button.twitter:hover {
+  background-color: #0c84d2;
+}
+
+/* Texto al final */
+.signup-text {
+  margin-top: 20px;
+}
+/* Estilos para el switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Redondear slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
